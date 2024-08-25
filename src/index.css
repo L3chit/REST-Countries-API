@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+:root {
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+
+  color-scheme: light dark;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --dark-blue: hsl(209, 23%, 22%);
+  --very-dark-blue-bg: hsl(207, 26%, 17%);
+  --very-dark-blue-txt: hsl(200, 15%, 8%);
+  --dark-gray: hsl(0, 0%, 52%);
+  --very-light-gray: hsl(0, 0%, 98%);
+  --white: hsl(0, 0%, 100%);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  size: 14px;
+}
+
+strong {
+  font-weight: 800;
+}
+
+header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--very-light-gray);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.searchFilter {
+  input,
+  select {
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    background-color: var(--white);
+  }
+}
+
+.searchFilter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem;
+}
+
+.search-container > svg,
+.filter-container > svg {
+  color: var(--dark-gray);
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.filter-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translateY(-50%);
+}
+
+.search-container,
+.filter-container {
+  position: relative;
+}
+
+#search-input {
+  padding: 1rem 4rem;
+  min-width: 30vw;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#region{
+  padding: 1rem 2rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.countries {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 3rem;
+  margin: 2rem;
+}
+
+.elements {
+  background-color: var(--white);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.elementsFlag img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.elementsDetails {
+  padding: 0 1rem 1rem;
+  size: 1rem !important;
+}
+
+.elementsDetails h2 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  font-weight: 800;
+}
+
+.country-details {
+  padding: 2rem;
+}
+
+button.backBtn {
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.countryDetail {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(35vw, 1fr));
+  column-gap: 2rem;
+  margin: 2rem auto;
+  width: 75vw;
+}
+.countryFlag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 75vw;
+  img {
+    min-height: 100px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+.countryInfo {
+  display: grid;
+}
+.countryDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 50%));
+  column-gap: 1rem;
+}
+.borderCountries {
+  display: flex;
+  flex-wrap: wrap;
+}
+.borderCountries button {
+  margin: 5px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode button {
+  color: var(--white) !important;
+}
+.light-mode button,
+.light-mode input,
+.light-mode select {
+  color: var(--very-dark-blue-txt) !important;
+}
+
+.dark-mode {
+  color: var(--white) !important;
+  background-color: var(--very-dark-blue-bg) !important;
+}
+
+.dark-mode .elements,
+.dark-mode header,
+.dark-mode input,
+.dark-mode select,
+.dark-mode button.backBtn {
+  background-color: var(--dark-blue) !important;
+}
+
+.light-mode {
+  color: var(--very-dark-blue-txt) !important;
+  background-color: var(--very-light-gray) !important;
+}
